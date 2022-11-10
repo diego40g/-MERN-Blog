@@ -1,10 +1,15 @@
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./page/Home";
 
 function App() {
   return (
-    <div className="bg-red-500 text-center text-white">
-      App Component
-    </div>
+    <Router>
+      <div className="max-w-screen-md mx-auto pt-20">
+        <Routes>
+          <Route path="/" element={<Home/>} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
