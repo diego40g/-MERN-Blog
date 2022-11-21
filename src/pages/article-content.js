@@ -20,7 +20,7 @@ const articles = [
       ],
     },
     {
-      name: "my-thoughts-on-learning-react",
+      name: "my-thougts-on-learning-react",
       title: "My Thoughts on Learning ReactJS",
       thumbnail: "/images/blog3.jpeg",
       content: [
