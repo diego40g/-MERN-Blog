@@ -7,11 +7,12 @@ import Notfound from "./Notfound";
 
 //Components
 import Articles from '../components/Articles'
+import CommentsList from "../components/CommentsList";
 
 const Article = () => {
   const {name}=useParams();
   const article = articleContent.find((article)=>article.name===name);
-  const [articleInfo, setArticleInfo]=useState({ comment: [] });
+  const [articleInfo, setArticleInfo]=useState({ comments: [] });
 
   useEffect(()=>{
     const fetchData=async()=>{
@@ -33,6 +34,7 @@ const Article = () => {
         {article.content.map((paragraph,index)=>(
           <p className='mx-auto leading-relaxed text-base mb-4' key={index}>{paragraph}</p>
         ))}
+        <CommentsList comments={articleInfo.comments}/>
         <h2 className='sm:text-2xl text-xl font-bold my-4 text-gray-900'>
           Other Articles
         </h2>
